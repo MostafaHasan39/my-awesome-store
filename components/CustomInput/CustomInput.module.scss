@@ -1,0 +1,31 @@
+.field {
+  @apply w-full outline-none font-normal text-base text-black bg-white rounded-xl pt-7 px-5 pb-3;
+  border: 1px solid rgba(black, 0.1);
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    @apply text-transparent;
+  }
+
+  &:-webkit-autofill {
+    & + label {
+      @apply font-light text-sm top-[10px];
+    }
+  }
+}
+.wrapper {
+  @apply relative flex;
+}
+.label.label__Lifted {
+  @apply font-light text-sm top-[10px];
+}
+.error {
+  border: 1px solid red;
+}
+.eye {
+  background: url(./icons/eye.svg) center center;
+  @apply block absolute border-none right-0 top-2 w-10 h-10 cursor-pointer outline-none bg-transparent bg-no-repeat py-7 px-5;
+}
+.label {
+  @apply absolute block top-5 left-5 font-medium text-black text-base cursor-text;
+}

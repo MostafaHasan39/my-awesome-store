@@ -1,0 +1,91 @@
+.heading {
+  &--xl {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 110%;
+
+    @screen sm {
+      font-size: 36px;
+    }
+
+    @screen md {
+      font-size: 48px;
+    }
+
+    @screen lg {
+      font-size: 60px;
+    }
+  }
+
+  &--lg {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+
+    @screen md {
+      font-size: 24px;
+    }
+
+    @screen lg {
+      font-size: 30px;
+    }
+  }
+
+  &--md {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+  }
+  &--sm {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.text {
+  &--lg {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &--md {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &--sm {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+h1,
+.h1 {
+  @extend .heading--xl;
+}
+
+h2,
+.h2 {
+  @extend .heading--lg;
+}
+
+h3,
+.h3 {
+  @extend .heading--md;
+}
+
+h4,
+.h4 {
+  @extend .heading--sm;
+}
+
+.text,
+p {
+  @extend .text--lg;
+}
+
+.text--md {
+  @extend .text--md;
+}

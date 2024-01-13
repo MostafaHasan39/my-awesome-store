@@ -1,0 +1,10 @@
+.root {
+  @apply flex justify-between items-start px-4 lg:px-8 py-12 flex-wrap gap-x-12 gap-y-8 bg-[var(--light-blue)];
+
+  svg {
+    &:hover {
+      fill: var(--orange);
+      transition: all 0.5s ease;
+    }
+  }
+}

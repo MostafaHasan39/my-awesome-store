@@ -1,0 +1,53 @@
+.root {
+  .cardWrapper {
+    @apply overflow-hidden relative cursor-pointer rounded-lg;
+    border: 1px solid #00000019;
+  }
+
+  .imageWrapper {
+    @apply relative w-full;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .backdrop {
+    opacity: 0;
+    @apply absolute inset-0 bg-black bg-opacity-10;
+    transition: opacity 0.8s ease-in-out;
+
+    & > div > span {
+      background-color: white;
+      padding: 12px;
+      border-radius: 50%;
+
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-color: var(--blue);
+        svg {
+          * {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .imageWrapper {
+      transform: scale(1.1);
+    }
+
+    .backdrop {
+      opacity: 1;
+    }
+  }
+
+  .detailsWrapper {
+    @apply mt-2 flex flex-col justify-between items-center;
+    h4 {
+      @apply text-[var(--blue)] hover:text-[var(--orange)] transition ease-in-out duration-200;
+    }
+    span {
+      @apply text-[var(--gray)];
+    }
+  }
+}

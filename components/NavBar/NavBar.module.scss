@@ -1,0 +1,42 @@
+.root {
+  @apply flex justify-between items-center px-4 lg:px-8  py-4 lg:py-6 bg-white fixed inset-x-0 top-0 z-[9];
+  box-shadow: 0 0 10px 0 rgba(black, 0.1);
+
+  &.transparent {
+    @apply bg-transparent shadow-none;
+  }
+
+  li {
+    @apply hover:text-[var(--orange)] transition ease-in-out duration-200;
+  }
+
+  svg {
+    @apply cursor-pointer;
+  }
+
+  .userIcon {
+    transition: all 0.3s ease;
+    &:hover {
+      scale: 1.2;
+      stroke: var(--orange);
+    }
+  }
+
+  .cartIconWrapper {
+    @apply relative cursor-pointer;
+
+    &:hover {
+      .cartIcon {
+        transition: all 0.3s ease;
+        scale: 1.2;
+        * {
+          fill: var(--orange);
+        }
+      }
+    }
+
+    .cartCount {
+      @apply absolute top-[-6px] right-[-6px] z-[2] text-white text-xs bg-black rounded-full px-1;
+    }
+  }
+}

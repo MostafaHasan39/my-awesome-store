@@ -1,0 +1,97 @@
+.root {
+  @apply text-sm lg:text-base cursor-pointer text-white flex justify-center items-center bg-[var(--blue)] transition ease-in-out hover:bg-[var(--orange)] hover:transition-all  duration-700;
+
+  &.colorTheme__primary {
+    --base-color: var(--blue);
+    --fill-color: var(--orange);
+
+    &.reverted {
+      --base-color: var(--orange);
+      --fill-color: var(--blue);
+    }
+  }
+
+  &.colorTheme__secondary {
+    --base-color: var(--blue);
+    --fill-color: var(--dark-yellow);
+
+    &.reverted {
+      --base-color: var(--dark-yellow);
+      --fill-color: var(--blue);
+    }
+  }
+
+  &.fillAnimation {
+    &__right {
+      background: linear-gradient(
+        to right,
+        var(--base-color) 50%,
+        var(--fill-color) 50%
+      );
+      background-size: 200% 100%;
+      background-position: left bottom;
+      &:hover {
+        background-position: right bottom;
+      }
+    }
+
+    &__left {
+      background: linear-gradient(
+        to left,
+        var(--base-color) 50%,
+        var(--fill-color) 50%
+      );
+
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        background-position: left bottom;
+      }
+    }
+
+    &__top {
+      background: linear-gradient(
+        to top,
+        var(--base-color) 50%,
+        var(--fill-color) 50%
+      );
+
+      background-size: 100% 200%;
+      background-position: left bottom;
+      &:hover {
+        background-position: left top;
+      }
+    }
+
+    &__bottom {
+      background: linear-gradient(
+        to bottom,
+        var(--base-color) 50%,
+        var(--fill-color) 50%
+      );
+      background-size: 100% 200%;
+      background-position: left top;
+      &:hover {
+        background-position: left bottom;
+      }
+    }
+
+    transition: all 0.5s ease;
+  }
+
+  &.inline {
+    @apply inline-flex;
+  }
+
+  &:disabled {
+    @apply opacity-70 cursor-not-allowed hover:bg-[var(--blue)];
+  }
+}
+
+.normal {
+  @apply px-4 py-3  lg:px-8 lg:py-4;
+}
+
+.large {
+  @apply px-6 py-3  lg:px-12 lg:py-4;
+}

@@ -1,0 +1,11 @@
+.root {
+  @apply px-4 lg:px-8 my-12 relative max-w-full overflow-hidden;
+
+  .swiper {
+    @apply h-full max-h-full flex;
+  }
+
+  .swiperSlide {
+    @apply w-auto flex-shrink-0 block h-full max-h-full px-1;
+  }
+}

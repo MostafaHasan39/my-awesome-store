@@ -1,0 +1,6 @@
+.wrapper {
+  @apply relative;
+}
+.hidden {
+  @apply absolute inset-0 z-[2] opacity-0;
+}

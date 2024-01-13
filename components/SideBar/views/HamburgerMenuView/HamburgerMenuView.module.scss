@@ -1,0 +1,14 @@
+.root {
+  @apply py-6;
+
+  svg {
+    @apply mx-4 mb-4 cursor-pointer hover:text-[var(--orange)];
+  }
+
+  li {
+    @apply hover:bg-[var(--gray-1)] hover:bg-opacity-40;
+    a {
+      @apply px-4 py-2 block w-full;
+    }
+  }
+}

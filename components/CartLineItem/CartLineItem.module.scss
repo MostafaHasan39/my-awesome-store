@@ -1,0 +1,29 @@
+.root {
+  @apply p-4 flex justify-between items-stretch gap-4;
+  border-bottom: 1px solid rgba(black, 0.1);
+
+  .imageWrapper {
+    width: 120px;
+  }
+
+  .detailsWrapper {
+    @apply flex-1 py-2;
+
+    h3 {
+      @apply mb-1 font-normal;
+    }
+
+    span {
+      @apply text-[var(--gray)];
+    }
+  }
+
+  .delete {
+    @apply mt-2 cursor-pointer;
+    &:hover {
+      stroke: var(--orange);
+      color: var(--orange);
+      fill: var(--orange);
+    }
+  }
+}

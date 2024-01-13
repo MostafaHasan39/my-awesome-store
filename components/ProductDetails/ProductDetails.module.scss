@@ -1,0 +1,49 @@
+.root {
+  @apply w-full flex justify-start items-stretch flex-col md:flex-row mt-10;
+
+  .mediaWrapper,
+  .detailsWrapper {
+    @apply w-full md:w-1/2;
+  }
+  .mediaWrapper {
+    @apply relative flex flex-col justify-center items-stretch;
+    box-shadow: 0 0 10px 0 rgba(black, 0.1);
+
+    @screen lg {
+      @apply flex-row-reverse;
+
+      .thumbsSwiperWrapper {
+        @apply w-1/5 flex;
+
+        .thumbSlide {
+          @apply w-full min-w-full;
+        }
+
+        .thumbsSlider {
+          :global(.swiper-slide) {
+            opacity: 0.4;
+          }
+          :global(.swiper-slide-thumb-active) {
+            opacity: 1;
+          }
+        }
+
+        .mainSlider {
+          :global(.swiper-button-next) {
+            background-color: red !important;
+            svg {
+              fill: black !important;
+            }
+          }
+        }
+      }
+      .mainSwiperWrapper {
+        @apply w-4/5;
+      }
+    }
+  }
+
+  .detailsWrapper {
+    @apply py-12 px-8;
+  }
+}

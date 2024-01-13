@@ -1,0 +1,12 @@
+.root {
+  @apply w-full max-w-sm my-40 px-8 py-12 rounded-xl;
+  box-shadow: 0 0 10px 0 rgba(black, 0.1);
+
+  h2 {
+    @apply font-normal mb-8;
+  }
+
+  .fieldsWrapper {
+    @apply flex flex-col items-stretch gap-8;
+  }
+}

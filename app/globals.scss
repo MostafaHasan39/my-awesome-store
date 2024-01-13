@@ -2,8 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "styles/fonts";
+@import "styles/typography";
+
 :root {
-  
+  // Fonts variables
+  --font-montserrat: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
+  --font-inter: "Inter", "Helvetica Neue", "Helvetica", sans-serif;
+
+  // Colors
+  --blue: #27496d;
+  --blue-1: #27496d80;
+  --light-blue: #dcf0fa;
+  --dark-yellow: #927d08;
+  --orange: #da510f;
+  --gray: #696969;
+  --gray-1: #7b7b7b1a;
+  --light: #ededed;
 }
 
-
+* {
+  font-family: var(--font-inter);
+  margin: 0;
+  padding: 0;
+}
